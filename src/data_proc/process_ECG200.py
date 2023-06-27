@@ -103,8 +103,6 @@ A myocardial infarction event refers to a heart attack caused by prolonged cardi
 心肌梗塞事件指的是由于心肌缺血时间过长而引发的心脏病发作。
 <response>
 """,
-    """ """,
-    """ """,
 
 ]
 
