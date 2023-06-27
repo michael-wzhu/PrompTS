@@ -1,0 +1,168 @@
+prompt1:
+From August 16, 2019, Friday to August 30, 2019, Friday, the average temperature of region 110 was 78, 81, 83, 84, 84, 82, 83, 78, 77, 77, 74, 77, 78, 73, 76 degree on each day. What is the temperature going to be on August 31, 2019, Saturday?
+chatgpt:
+To find the temperature on August 31, 2019, Saturday, we need to calculate the average temperature for the given period. Let's add up all the temperatures for the 15 days and divide by 15 to get the average:
+
+78 + 81 + 83 + 84 + 84 + 82 + 83 + 78 + 77 + 77 + 74 + 77 + 78 + 73 + 76 = 1162
+
+1162 divided by 15 = 77.47 (rounded to two decimal places)
+
+Therefore, the average temperature for the given period is approximately 77.47 degrees.
+-----------------------------------------------
+论文给出的例子，chatgpt仅仅通过计算平均数给出预测
+
+prompt2：
+From August 16, 2019, Friday to August 30, 2019, Friday, the temperature of region 110 was 78, 81, 83, 84, 84, 82, 83, 78, 77, 77, 74, 77, 78, 73, 76 degree on each day. What is the temperature going to be on August 31, 2019, Saturday?
+chatgpt:
+To predict the temperature on August 31, 2019, Saturday, we can analyze the pattern in the given data for the temperature of region 110 from August 16, 2019, to August 30, 2019.
+
+Let's list the temperatures for the given days:
+
+August 16, 2019: 78°F
+August 17, 2019: 81°F
+August 18, 2019: 83°F
+August 19, 2019: 84°F
+August 20, 2019: 84°F
+August 21, 2019: 82°F
+August 22, 2019: 83°F
+August 23, 2019: 78°F
+August 24, 2019: 77°F
+August 25, 2019: 77°F
+August 26, 2019: 74°F
+August 27, 2019: 77°F
+August 28, 2019: 78°F
+August 29, 2019: 73°F
+August 30, 2019: 76°F
+
+To identify any trends or patterns, let's visualize the data using a line graph:
+
+Temperature Line Graph
+
+Based on the given data, it does not appear to follow a clear pattern or trend. Therefore, it is difficult to accurately predict the temperature for August 31, 2019, Saturday, without additional information or knowledge about the weather patterns or any other relevant factors that might influence the temperature in region 110.
+---------------------------------
+去除prompt里的average词，chatgpt不会再计算平均数了，但是无法给出预测
+
+prompt3:
+From August 16, 2019, Friday to August 30, 2019, Friday, the temperature of region 110 was 78, 81, 83, 84, 84, 82, 83, 78, 77, 77, 74, 77, 78, 73, 76 degree on each day. Try to analyze the trend of temperature change step by step, and then estimate the temperature going to be on August 31, 2019, Saturday?
+chatgpt:
+To analyze the trend of temperature change in the given data, let's plot the temperatures on a line graph:
+
+Day 1 (August 16, 2019): 78
+Day 2 (August 17, 2019): 81
+Day 3 (August 18, 2019): 83
+Day 4 (August 19, 2019): 84
+Day 5 (August 20, 2019): 84
+Day 6 (August 21, 2019): 82
+Day 7 (August 22, 2019): 83
+Day 8 (August 23, 2019): 78
+Day 9 (August 24, 2019): 77
+Day 10 (August 25, 2019): 77
+Day 11 (August 26, 2019): 74
+Day 12 (August 27, 2019): 77
+Day 13 (August 28, 2019): 78
+Day 14 (August 29, 2019): 73
+Day 15 (August 30, 2019): 76
+
+Now, let's analyze the trend based on the given data:
+
+The temperature starts at 78 on Day 1 and increases gradually until Day 4, reaching 84 degrees.
+There is a slight decrease in temperature on Day 5, but it remains relatively high at 84 degrees.
+From Day 6 to Day 7, there is a small drop to 82 and 83 degrees, respectively.
+On Day 8, there is a significant decrease to 78 degrees.
+Days 9 and 10 see the temperature staying relatively stable at 77 degrees.
+On Day 11, there is a noticeable drop to 74 degrees.
+The temperature then increases again on Day 12 and Day 13, reaching 78 degrees.
+On Day 14, there is a significant decrease to 73 degrees.
+Finally, on Day 15, the temperature increases slightly to 76 degrees.
+Based on this analysis, the temperature seems to fluctuate within a range, with occasional drops and increases. It is difficult to determine a clear trend from this limited data. However, if we assume that the temperature continues to fluctuate within a similar range, we can make a rough estimate for August 31, 2019.
+
+Considering the previous fluctuations, it is reasonable to estimate the temperature on August 31, 2019 (Saturday) to be around the mid-range of the observed temperatures. Therefore, we can estimate the temperature to be around 77 to 78 degrees on that day. However, please note that this is just an estimation based on the given data, and actual weather conditions may vary.
+--------------------------------------------
+让chatgpt尝试分析变化趋势，成功得到了一个预测
+
+prompt4:
+From August 16, 2019, Friday to August 30, 2019, Friday, the temperature of region 110 was 78, 81, 83, 84, 84, 82, 83, 78, 77, 77, 74, 77, 78, 73, 76 degree on each day. Try to analyze the trend of temperature change  and the reasons for the change step by step, and then estimate the temperature going to be on August 31, 2019, Saturday? 
+chatgpt:
+
+To analyze the trend of temperature change in the given period, we can start by creating a chart or graph to visualize the data. Let's plot the temperatures for each day from August 16, 2019, to August 30, 2019:
+
+Date	Temperature (°F)
+Aug 16, 19	78
+Aug 17, 19	81
+Aug 18, 19	83
+Aug 19, 19	84
+Aug 20, 19	84
+Aug 21, 19	82
+Aug 22, 19	83
+Aug 23, 19	78
+Aug 24, 19	77
+Aug 25, 19	77
+Aug 26, 19	74
+Aug 27, 19	77
+Aug 28, 19	78
+Aug 29, 19	73
+Aug 30, 19	76
+Now, let's analyze the trend of temperature change during this period:
+
+Overall, the temperatures seem to fluctuate within a certain range between 73°F and 84°F.
+
+From August 16 to August 19, there is a gradual increase in temperature, reaching a peak of 84°F on August 19.
+
+The following day, August 20, the temperature remains high at 84°F.
+
+From August 21 to August 22, there is a slight drop in temperature, but it remains relatively warm.
+
+From August 23 to August 25, there is a further decrease in temperature, reaching a low of 73°F on August 29.
+
+On August 30, the temperature slightly increases to 76°F.
+
+Based on this analysis, we can observe that there is a general pattern of increasing temperatures from August 16 to August 19, followed by a slight decrease and further fluctuations. The drop in temperature from August 23 to August 29 indicates a cooling trend.
+
+Now, let's estimate the temperature on August 31, 2019, Saturday, based on the observed trend. Since we don't have the temperature data for August 31, we can make an assumption based on the overall pattern of temperature change.
+
+Considering the cooling trend observed from August 23 to August 29, it is likely that the temperature on August 31 will be on the lower side compared to the previous days. However, since the available data is limited, it is difficult to make an accurate prediction. Assuming the cooling trend continues, we might expect the temperature on August 31, 2019, to be around 73°F or slightly lower.
+------------------------------------------------
+再额外让chatgpt分析变化原因，发现预测值发生了变化，但是原因还是未能给出
+
+prompt5:
+From August 16, 2019, Friday to August 30, 2019, Friday, the temperature of region 110 was 78, 81, 83, 84, 84, 82, 83, 78, 77, 77, 74, 77, 78, 73, 76 degree on each day. Try to analyze the trend of temperature change  and the reasons for the change step by step, and then estimate the temperature going to be on August 31, 2019, Saturday? You can see it's in the temperate rainforest climate of the Northern Hemisphere.
+chatgpt:
+To analyze the trend of temperature change in region 110 from August 16 to August 30, 2019, we can start by examining the temperature values for each day:
+
+August 16: 78°F
+August 17: 81°F
+August 18: 83°F
+August 19: 84°F
+August 20: 84°F
+August 21: 82°F
+August 22: 83°F
+August 23: 78°F
+August 24: 77°F
+August 25: 77°F
+August 26: 74°F
+August 27: 77°F
+August 28: 78°F
+August 29: 73°F
+August 30: 76°F
+
+From this data, we can observe the following trends:
+
+Overall Variation: The temperature shows some fluctuations throughout the given period. It starts at 78°F, rises to a peak of 84°F, and then gradually decreases towards the end.
+
+Periods of Stability: There are periods where the temperature remains relatively stable. For example, from August 20 to August 22, the temperature remains at 84°F, indicating a consistent weather pattern during that time.
+
+Temperature Decreases: Towards the end of the given period, specifically from August 26 to August 30, there is a noticeable decrease in temperature. It drops from 74°F to 76°F, indicating a cooling trend.
+
+Now, let's discuss the possible reasons for these temperature changes in a temperate rainforest climate in the Northern Hemisphere:
+
+Seasonal Transition: August marks the transition from summer to early autumn in the Northern Hemisphere. The temperature fluctuations and decreasing trend observed during this period can be attributed to the changing seasons.
+
+Air Masses: Shifts in air masses can impact temperature variations. Factors like air movement, cloud cover, and precipitation can affect the temperature patterns. The temperate rainforest climate is characterized by ample rainfall, and these weather conditions may influence temperature changes in the region.
+
+Local Factors: Local geographic features, such as elevation, proximity to bodies of water, and topography, can also impact temperature. For example, higher elevation areas may experience cooler temperatures compared to lower-lying regions.
+
+Based on the given data and the observed trend, we can estimate the temperature on August 31, 2019, Saturday. Since the trend shows a decreasing pattern towards the end of the given period, it is likely that the temperature on August 31 would be lower than the last recorded temperature of 76°F. However, without additional data or specific knowledge about the region, it is challenging to provide an accurate estimate. Weather patterns can be influenced by various factors and can be subject to variability, making precise predictions difficult.
+
+Therefore, it is recommended to refer to local meteorological forecasts or historical weather data for a more accurate estimation of the temperature on August 31, 2019, in region 110.
+----------------------------
+添加对所在地所处气候地区的描述，chatgpt给出了气候的变化的原因，对下一天的气温预测变为更为谨慎的低于76华氏度
