@@ -46,3 +46,4 @@ __pycache__/
 /tmp/
 /datasets/
 /src/eval_chatgpt/
+/schedules/
