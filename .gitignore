@@ -16,7 +16,7 @@ wandb/*
 
 tmp/*
 datasets/*
-
+*.DS_Store
 *.log
 
 *.wav
