@@ -5,29 +5,29 @@ import os
 task_type_prompt = "Task type: time series classfication"
 
 template_1 = """<query>
-在存在噪声数据的情况下，我们需要诊断汽车子系统中是否存在某种故障。每个案例包含500个发动机噪声测量值的时间序列：<ts-data-blank-sep>，其中数据点以空格分隔，请问该案例中，汽车系统是否存在这种故障？
+在存在噪声数据的情况下，我们需要诊断汽车子系统中是否存在某种故障。每个案例包含500个发动机噪声测量值的时间序列：<ts-data-blank-sep>，其中数据点以空格分隔，请问该案例中，汽车系统是否存在故障？
 <response>
 """
 
 list_templates_by_chatgpt = [
     """<query>
-我们需要在存在噪声数据的情况下诊断汽车子系统是否存在某种故障。每个案例包括一个包含500个发动机噪声测量值的时间序列：<ts-data-blank-sep>，其中数据点以空格分隔。请问在该案例中，汽车系统是否存在这种故障？
+我们需要在存在噪声数据的情况下诊断汽车子系统是否存在某种故障。每个案例包括一个包含500个发动机噪声测量值的时间序列：<ts-data-blank-sep>，其中数据点以空格分隔。请问在该案例中，汽车系统是否存在故障？
 <response>
 """,
     """<query>
-我们需要判断汽车子系统在噪声数据影响下是否出现某种故障。每个案例都有一个包含500个发动机噪音测量值的时间序列：<ts-data-blank-sep>。数据点之间用空格分隔。请问在这个案例中，汽车系统是否存在这种故障？
+我们需要判断汽车子系统在噪声数据影响下是否出现某种故障。每个案例都有一个包含500个发动机噪音测量值的时间序列：<ts-data-blank-sep>。数据点之间用空格分隔。请问在这个案例中，汽车系统是否存在故障？
 <response>
 """,
     """<query>
-In the presence of noise data, we need to diagnose whether a certain symptom exists in the automotive subsystem. Each case consists of a time series of 500 engine noise measurements: <ts-data-blank-sep>, where data points are separated by spaces. Could you please let us know if this symptom exists in the automotive system of this case?
+In the presence of noise data, we need to diagnose whether a certain symptom exists in the automotive subsystem. Each case consists of a time series of 500 engine noise measurements: <ts-data-blank-sep>, where data points are separated by spaces. Could you please let us know if a certain symptom exists in the automotive system of this case?
 <response>
 """,
     """<query>
-We need to diagnose the presence of a certain symptom in the automotive subsystem in the presence of noisy data. Each case includes a time series of 500 measurements of engine noise: <ts-data-blank-sep>. The data points are separated by spaces. Could you please inform us if this symptom is present in the automotive system of this particular case?
+We need to diagnose the presence of a certain symptom in the automotive subsystem in the presence of noisy data. Each case includes a time series of 500 measurements of engine noise: <ts-data-blank-sep>. The data points are separated by spaces. Could you please inform us if a certain symptom is present in the automotive system of this particular case?
 <response>
 """,
     """<query>
-We need to decide whether the car subsystem shows a certain symptom under the influence of noisy data. Each case includes a time series of 500 engine noise measurements: <ts-data-blank-sep>, with data points separated by spaces. Could you please inform us if this symptom is present in the automotive system of this particular case?
+We need to decide whether the car subsystem shows a certain symptom under the influence of noisy data. Each case includes a time series of 500 engine noise measurements: <ts-data-blank-sep>, with data points separated by spaces. Could you please inform us if a certain symptom is present in the automotive system of this particular case?
 <response>
 """,
 
