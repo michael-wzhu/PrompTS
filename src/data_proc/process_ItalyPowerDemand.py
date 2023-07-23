@@ -5,50 +5,64 @@ import os
 task_type_prompt = "Task type: time series classfication"
 
 template_1 = """<query>
-以下是意大利12个月的电力需求时间序列：<ts-data-blank-sep>，其中数据点以空格分隔。请确定这一天是十月至三月的还是四月至九月的。
+以下是意大利某一天内每个小时的电力需求时间序列：<ts-data-blank-sep>，其中数据点以空格分隔。请确定这一天是来自于十月至三月，还是四月至九月的？
 <option>
-只能从十月至三月、四月至九月中挑一个回答。
+只能从'十月至三月'、'四月至九月'中挑一个回答。
 不可以回答单独一个月份。
 <response>
 """
 
 list_templates_by_chatgpt = [
     """<query>
-以下是意大利12个月的电力需求时间序列：<ts-data-blank-sep>，其中数据点以空格分隔。请确定这一天是属于十月至三月还是四月至九月的时间段。
+以下是意大利某一天内每个小时的电力需求时间序列：<ts-data-blank-sep>，其中数据点以空格分隔。请确定这一天是属于'十月至三月'，还是'四月至九月'？
 <option>
-只能从十月至三月、四月至九月中选择一个答案。
-不能回答单独的月份。
+只能从'十月至三月'、'四月至九月'中挑选一个回答。
+不可以回答单独一个月份。
 <response>
 """,
     """<query>
-给出意大利的12个月电力需求时间序列：<ts-data-blank-sep>，数据点之间以空格分隔。请确定该日期是在十月至三月之间还是四月至九月之间。
+给出意大利的某一天内每个小时的电力需求时间序列：<ts-data-blank-sep>，数据点之间以空格分隔。请确定该日期是在十月至三月之间还是四月至九月之间?
 <option>
 只能选择十月至三月或四月至九月其中之一。
 不能单独回答一个月份。
 <response>
 """,
     """<query>
-Below is the time series of electricity demand for 12 months in Italy: <ts-data-blank-sep>, where data points are separated by spaces. Please determine if this day belongs to October to March or April to September.
+Below is the time series of electricity demand for each hour in a day in Italy: <ts-data-blank-sep>. The data points are separated by spaces. Please determine whether this day belongs to the period from October to March or from April to September.
 <option>
-You can only choose between October to March or April to September.
-You cannot answer with an individual month.
+You can only choose between 'October to March' or 'April to September' as your answer.
+You cannot respond with an individual month.
 <response>
-""",
+    """,
     """<query>
-Here is the time series of electricity demand for 12 months in Italy: <ts-data-blank-sep>, where data points are separated by spaces. Please determine whether this day falls within the period of October to March or April to September.
-<option>
-You can only choose between October to March or April to September.
-Do not provide an answer with an individual month.
-<response>
-""",
-    """<query>
-Provided is the time series of electricity demand for 12 months in Italy: <ts-data-blank-sep>, with data points separated by spaces. Please determine whether this day falls within the period from October to March or from April to September.
-<option>
-You can only choose between the period from October to March or from April to September.
-Do not provide an answer with an individual month.
-<response>
-""",
+The following represents the hourly electricity demand time series for a day in Italy: <ts-data-blank-sep>. The data points are separated by spaces. Please ascertain if this day falls within the period from October to March or from April to September.
 
+<option>
+Your response should be either 'October to March' or 'April to September'.
+You are not allowed to answer with a specific month.
+<response>
+    """,
+    """<query>
+This is the time series of electricity demand for each hour of a particular day in Italy: <ts-data-blank-sep>. The data points are separated by spaces. Please determine whether this day falls within the range of October to March or April to September.
+<option>
+You can only select one answer from 'October to March' or 'April to September'.
+You cannot choose an individual month.
+<response>
+""",
+    """<query>
+Here is the time series data for the electricity demand in Italy for each hour of a day: <ts-data-blank-sep>. The data points are separated by spaces. Please identify whether this day is from October to March or from April to September.
+<option>
+You must choose between 'October to March' or 'April to September' as your answer.
+You cannot specify a single month.
+<response>
+    """,
+    """<query>
+Displayed below is the time series of electricity demand for each hour on a specific day in Italy: <ts-data-blank-sep>. The data points are separated by spaces. Please indicate whether this day falls within the time frame of October to March or April to September.
+<option>
+You are required to select either 'October to March' or 'April to September' in your response.
+You are not allowed to mention a single month.
+<response>
+    """,
 ]
 
 label_map = {
