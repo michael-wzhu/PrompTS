@@ -5,7 +5,7 @@ import os
 task_type_prompt = "Task type: time series classfication"
 
 template_1 = """<query>
-以下是收集到的消费者在家中用电量的时间序列数据：<ts-data-blank-sep>，其中数据点以空格分隔。请根据该时间序列判断消费者使用的电器是哪个。
+以下是消费者在家中使用某种家用电器时的24小时用电量时间序列数据（每两分钟记录一次）：<ts-data-blank-sep>。请根据该时间序列判断消费者使用的电器是哪个类型。
 <option>
 从洗衣机、滚筒式烘干机和洗碗机中选择一个。
 不可以回答其他答案。
@@ -14,40 +14,68 @@ template_1 = """<query>
 
 list_templates_by_chatgpt = [
     """<query>
-已知消费者在家中用电量的时间序列数据：<ts-data-blank-sep>，其中数据点以空格分隔。请根据该时间序列判断消费者使用的电器。
+以下是消费者在家中使用某种家用电器时的24小时用电量时间序列数据（每两分钟记录一次）：<ts-data-blank-sep>。请根据该时间序列判断消费者使用的电器是哪个类型。
 <option>
-从洗衣机、滚筒式烘干机和洗碗机中选择一个。
-不可以回答其他答案。
+请选择消费者使用的电器类型：洗衣机、滚筒式烘干机或洗碗机。
+请勿提供其他答案。
 <response>
-""",
+    """,
     """<query>
-给出消费者在家中用电量的时间序列数据：<ts-data-blank-sep>，其中数据点以空格分隔。根据该时间序列，请回答消费者使用的是哪种电器。
+以下是消费者在家中使用某种家用电器时的24小时用电量时间序列数据（每两分钟记录一次）：<ts-data-blank-sep>。请根据该时间序列分析消费者使用的电器类型。
 <option>
-答案从洗衣机、滚筒式烘干机和洗碗机中选择一个。
-不可以回答其他答案。
+请从以下选项中选择消费者使用的电器类型：
+1. 洗衣机
+2. 滚筒式烘干机
+3. 洗碗机
 <response>
-""",
+    """,
+    """<query>根据提供的数据，推断消费者在家中使用的家用电器类型是哪一个？\n<ts-data-blank-sep>, 这是消费者在家中使用某种家用电器时，每两分钟的用电量时间序列数据
+<option>
+请选择消费者使用的电器类型：
+1. 洗衣机
+2. 滚筒式烘干机
+3. 洗碗机
+<response>
+    """,
+
+    
+    """<query>Based on the provided data, determine the type of household appliance that the consumer is using at home? \n<ts-data-blank-sep>, these are time series data representing the electricity consumption every two minutes when the consumer is using a certain household appliance at home.
+<option>
+Please select the type of household appliance the consumer is using:
+1. washing machine
+2. tumble dryer
+3. dishwasher
+<response>
+    """,
+    """<query>Based on the given data, make an inference about the household appliance type being used by the consumer at their place of residence? \n<ts-data-blank-sep>, these time series data indicate the electricity usage every two minutes while the consumer employs a specific household appliance in their home.
+<option>
+Kindly choose the type of household appliance the consumer is utilizing:
+1. washing machine
+2. tumble dryer
+3. dishwasher
+<response>
+    """,
     """<query>
-Below is the time series data of electricity consumption by consumers in their homes: <ts-data-blank-sep>, where data points are separated by spaces. Please determine which appliance the consumer is using based on this time series.
+Below is the 24-hour electricity consumption time series data of a certain household appliance used by the consumer at home (recorded every two minutes): <ts-data-blank-sep>. Please determine which type of household appliance the consumer is using based on this time series.
 <option>
-Choose between a washing machine, a tumble dryer, or a dishwasher.
-Do not provide any other answer.
+Choose one from the washing machine, tumble dryer, and dishwasher.
+Do not provide any other answers.
 <response>
-""",
+    """,
     """<query>
-Presented is a time series dataset of electricity consumption by consumers in their homes: <ts-data-blank-sep>, with data points separated by spaces. Based on this time series, please identify the appliance being used by the consumer.
+The following is a time series data of electricity consumption for a specific household appliance used by the consumer at home over a 24-hour period (recorded every two minutes): <ts-data-blank-sep>. Based on this time series, please identify the type of household appliance being used by the consumer.
 <option>
-Choose between a washing machine, a tumble dryer, or a dishwasher.
-Do not provide any other answer.
+Select one from the washing machine, tumble dryer, and dishwasher.
+Do not include any other options.
 <response>
-""",
+    """,
     """<query>
-Give the time series data of consumers' electricity consumption at home: <ts-data-blank-sep>, where the data points are separated by spaces. Based on this time series, answer what kind of appliance the consumer is using.
+Here is the 24-hour electricity usage time series data for a certain household appliance used by the consumer at home (recorded every two minutes): <ts-data-blank-sep>. Your task is to determine the type of household appliance the consumer is using based on this time series.
 <option>
-The answer is one of the washing machine, tumble dryer and dishwasher.
-No other answer can be given.
+Choose one among the washing machine, tumble dryer, and dishwasher.
+Please refrain from providing other answers.
 <response>
-""",
+    """,
 
 ]
 
