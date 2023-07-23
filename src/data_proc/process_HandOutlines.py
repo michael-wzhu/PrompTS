@@ -6,33 +6,67 @@ task_type_prompt = "Task type: time series classfication"
 
 
 template_1 = """<query>
-Could you please help me validate the accuracy of the output labels for the time sequence data: <ts-data-blank-sep>? The data is separated by spaces and represents the hand contour, which has been extracted from images using an algorithm.
+The following time series is the outlines of hand derived from images : <ts-data-blank-sep>\n Since the data is extracted automatically by a certain algorithm, could you determine whether the output of the image outlinings is correct or incorrect?
+<options>
+candidate labels: correct, incorrect
 <response>
 """
 
 list_templates_by_chatgpt = [
     """<query>
-The collection of data in our list signifies a time sequence, comprised of hand contour data extracted by algorithms and delimited by spaces: <ts-data-blank-sep>. Can you determine whether the output labels are correct?
+We have a time series representing the outlines of hands derived from images: <ts-data-blank-sep>\n The data extraction process is automated, using a specific algorithm. I need your assistance in determining whether the output of the image outlinings is correct or incorrect.
+<options>
+Please provide one of the following candidate labels: "correct" or "incorrect."
+<response>
+    """,
+    """<query>
+We possess a time series that illustrates hand outlines obtained from images: <ts-data-blank-sep>\n As the data is automatically extracted using a particular algorithm, can you ascertain whether the image outlinings are accurate or not?
+<options>
+You can choose from the candidate labels: "correct" or "incorrect."
+<response>
+    """,
+    """<query>
+Presented here is a time series displaying hand outlines obtained from images: <ts-data-blank-sep>\n Since an algorithm automatically extracted this data, could you help determine if the image outlinings are right or wrong?
+<options>
+Please select one of the candidate labels: "correct" or "incorrect."
+<response>
+    """,
+    """<query>
+We have a time series that outlines hands obtained from images: <ts-data-blank-sep>\n Given that the data is extracted using an automated algorithm, can you judge whether the image outlinings are accurate or not?
+<options>
+Choose one from the candidate labels: "correct" or "incorrect."
+<response>
+    """,
+    """<query>
+The following time series represents hand outlines derived from images: <ts-data-blank-sep>\n As the data extraction is automated using a specific algorithm, we need to determine if the image outlinings are correct or incorrect.
+<options>
+Kindly provide one of the candidate labels: "correct" or "incorrect."
+<response>
+    """,
+    """<query>
+Displayed is a time series depicting hand outlines extracted from images: <ts-data-blank-sep>\n Since the data is obtained automatically through an algorithm, can you decide whether the image outlinings are accurate or not?
+<options>
+You have the option to select either "correct" or "incorrect" as the candidate labels.
+<response>
+    """,
+
+    
+    """<query>
+我们有一个时间序列，展示了从图像中得出的手部轮廓：<ts-data-blank-sep>\n由于数据是通过某种算法自动提取的，您能否确定图像轮廓的输出是正确还是错误？
+<options>
+候选标签：正确，错误
 <response>
 """,
     """<query>
-We have a list of data representing a time sequence, separated by spaces: <ts-data-blank-sep>. It is the hand contour data extracted from images using an algorithm. Can you help me verify if their output labels are correct?
+这是一个展示从图像中提取的手部轮廓的时间序列：<ts-data-blank-sep>\n由于数据是通过自动算法提取的，您能否帮助确定图像轮廓的准确性？
+<options>
+请选择以下候选标签之一："正确" 或 "错误"。
 <response>
 """,
     """<query>
-We possess a list of time sequence data, separated by spaces: <ts-data-blank-sep>, that represents the hand contour extracted from images using an algorithm. Can you assist me in verifying whether the output labels for this data are accurate?
-<response>
-""",
-    """<query>
-我们有一个数据列表，表示一个时间序列（用空格分隔）：<ts-data-blank-sep>。它是利用算法提取图像的手部轮廓数据。你能帮助我确定他们的输出标记是否正确吗？
-<response>
-""",
-    """<query>
-请你协助确认输出标记是否准确。我们的数据列表表示一个时间序列，它由算法提取出的手部轮廓数据组成（用空格分隔）: <ts-data-blank-sep>。
-<response>
-""",
-    """<query>
-我们的列表中收集的数据表示一个时间序列，由算法提取的手部轮廓数据组成，并以空格分隔：<ts-data-blank-sep>。你能确定输出标签是否正确吗？
+以下时间序列显示了从图像中获取的手部轮廓：<ts-data-blank-sep>\n由于数据是通过特定算法自动提取的，您能否判断图像轮廓的准确性？
+<options>
+请从以下候选标签中选择："正确" 或 "错误"。
 <response>
 """,
 ]
@@ -42,8 +76,8 @@ label_map = {
     "1": "incorrect",
 }
 label_map_zh = {
-    "0": "标记正确",
-    "1": "标记不正确",
+    "0": "正确",
+    "1": "错误",
 }
 
 
