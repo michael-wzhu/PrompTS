@@ -204,7 +204,6 @@ for location_idx, location_name in tqdm(location_id2name.items()):
                         "[REGION]", location_name_str
                     )
 
-
                     assert "<ts-data-comma-sep>" not in query_template
                     assert "<ts-data-blank-sep>" not in query_template
 
